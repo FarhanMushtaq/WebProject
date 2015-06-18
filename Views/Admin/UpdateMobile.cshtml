@@ -1,0 +1,30 @@
+﻿@model List<webProjectMVC.Models.Mobile>
+
+@{
+    Layout = null;
+}
+<h2>UpdateMobile</h2>
+<div>
+
+    @foreach (var m in Model)
+    {
+        <div class="col-md-5">
+            <p>
+                <img src="/MobileImage/@m.Image"><br>
+                Name:@m.Name<br>
+                Model:@m.Model<br>
+                Color:@m.Color<br>
+                Price:@m.Price<br>
+            </p>
+            <a href="~/Admin/ShowUpdateMobile/@m.Id" class="btn btn-primary">Update</a>
+            <a href="~/Admin/DeleteMobile/@m.Id" class="btn btn-primary">Delete</a>
+        </div>
+
+    }
+
+
+
+
+
+</div>
+

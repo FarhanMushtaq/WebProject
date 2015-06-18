@@ -1,0 +1,27 @@
+﻿@model List<webProjectMVC.Models.Electronics__>
+@{
+    ViewBag.Title = "UpdateElectronics";
+}
+@{
+    Layout = null;   
+}
+<h2>UpdateElectronics</h2>
+
+<div>
+
+    @foreach (var x in Model)
+    {
+        <div class="col-md-5">
+            <p>
+                <img src="/electronicImage/@x.Image"><br>
+                Name:@x.Name<br>
+                Price:@x.Price<br>
+                
+            </p>
+            <a href="/Admin/ShowUpdateElectronics/@x.Id" class="btn btn-primary">Update</a>
+            <a href="/Admin/DeleteElectronics/@x.Id" class="btn btn-primary">Delete</a>
+        </div>
+    }
+
+
+</div>

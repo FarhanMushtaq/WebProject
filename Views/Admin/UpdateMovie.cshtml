@@ -1,0 +1,30 @@
+﻿@model List<webProjectMVC.Models.Movy>
+@{
+    ViewBag.Title = "UpdateMovie";
+}
+@{
+    Layout = null;
+}
+<h2>UpdateMovie</h2>
+<div>
+
+    @foreach (var m in Model)
+    {
+        <div class="col-md-5">
+            <p>
+                <img src="/movieImage/@m.Image"><br>
+                Name:@m.Name<br>
+                Film Length:@m.Film_Length<br>
+                Film Size:@m.Film_Size<br>
+                Film Type:@m.Film_Type<br>
+                Price:@m.Price<br>
+            </p>
+            <a href="/Admin/ShowUpdateMovie/@m.Id" class="btn btn-primary">Update</a>
+            <a href="/Admin/DeleteMovie/@m.Id" class="btn btn-primary">Delete</a>
+        </div>
+    }
+
+</div>
+
+
+

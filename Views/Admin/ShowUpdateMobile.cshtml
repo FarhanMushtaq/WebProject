@@ -1,0 +1,43 @@
+﻿@model webProjectMVC.Models.Mobile
+@{
+    ViewBag.Title = "ShowUpdateMobile";
+}
+
+<h2>ShowUpdateMobile</h2>
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowUpdate</title>
+</head>
+<body>
+    <div>
+
+        <div class="container">
+            <div class="row">
+                @using (Html.BeginForm("SaveMobile", "Admin", FormMethod.Post))
+                {
+                    <div class="col-md-3">
+                        
+                        @*<img src="~/MobileImage/@Model" />*@
+
+                    </div>
+                    <div class="col-md-3">
+                        <h4> Name:</h4>  <input type="text" value="@Model.Name" name="Name" /><br />
+                        Model:   <input type="text" value="@Model.Model" name="Model" /><br />
+                        Color:<input type="text" value="@Model.Color" name="Color" /><br />
+                        Price:<input type="text" value="@Model.Price" name="Price" /><br />
+                        Image:<input type="text" value="@Model.Image" name="Image" /><br />
+                        <input type="text" style="display:none" value="@Model.Id" name="Id">
+                        <button type="submit" class="btn btn-primary">Update</button>
+
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

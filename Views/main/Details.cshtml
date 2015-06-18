@@ -1,0 +1,28 @@
+﻿@model List<webProjectMVC.Models.Mobile>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div>
+
+    @foreach (var m in Model)
+    {
+        <div class="col-md-5">
+            <p>
+               <img src="/MobileImage/@m.Image"><br>
+                Name:@m.Name<br>
+                Model:@m.Model<br>
+                Color:@m.Color<br>
+                Price:@m.Price<br>
+            </p>
+            </div>
+        
+    }
+
+
+
+
+
+</div>
+

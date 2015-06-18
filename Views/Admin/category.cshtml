@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminPage</title>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <div>
+                <h2>Welcome to Admin Panel</h2>
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                    <br /><br />
+                    <p class="lead">Categories</p>
+                    <div class="list-group">
+                       
+                        @Html.ActionLink("Mobile", "UpdateMobile", "Admin", new { id = 1 }, new { @class = "list-group-item" })
+                      
+                        @Html.ActionLink("Movie", "UpdateMovie", "Admin", new { id = 2 }, new { @class = "list-group-item" })
+                        @Html.ActionLink("Electronics", "UpdateElectronics", "Admin", new { id = 3 }, new { @class = "list-group-item" })
+                        <br />
+                      
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <br /><br />
+                 
+
+                </div>
+            </div>
+        </div>
+    </center>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/jquery-1.10.2.js"></script>
+</body>
+</html>

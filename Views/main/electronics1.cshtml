@@ -1,0 +1,22 @@
+﻿@model List<webProjectMVC.Models.Electronics__>
+@{
+    ViewBag.Title = "electronics1";
+}
+
+<h2>electronics1</h2>
+
+<div>
+    
+    @foreach(var x in Model)
+    {
+         <div class="col-md-5">
+        <p>
+            <img src="/electronicImage/@x.Image"><br>
+          Name:@x.Name<br>
+            Price:@x.Price<br>
+        </p>
+    </div>
+    }
+   
+
+</div>
